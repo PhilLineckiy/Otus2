@@ -9,14 +9,21 @@ The lesson 2: Дисковая подсистема. Работа с mdadm.
 Vagrantfile, который сразу собирает систему с подключенным рейдом.
 
 1. Работа с Vagrant.
+
   vagrant -v - версия Vagrant
+
 Vagrant 2.2.14
-    #vagrant box list
-centos-7-7      (virtualbox, 0) - используемый box
-centos/7        (virtualbox, 2004.01)
-ubuntu/trusty64 (virtualbox, 20190514.0.0)
+
+  vagrant box list
+
+-centos-7-7      (virtualbox, 0) - используемый box
+-centos/7        (virtualbox, 2004.01)
+-ubuntu/trusty64 (virtualbox, 20190514.0.0)
+
 Создан Vagrantfile(приложен к OtusHW2 с добавленными дисками), значит можем поднимать нашу виртуальную машину.
-    #vagrant up
+
+  vagrant up
+
 2. Работа с mdadm, сборка RAID
 Собираем из дисков RAID. Выбран RAID 5.Опция -l какого уровня RAID создавать,опция - n указывает на кол-во устройств в RAID:
     #mdadm --create --verbose /dev/md0 -l 5 -n 5 /dev/sd{b,c,d,e,f}
