@@ -10,8 +10,10 @@ Vagrantfile, который сразу собирает систему с под
 
 1. Работа с Vagrant.
 
-  'vagrant -v' - версия Vagrant
-
+  '''
+  vagrant -v - версия Vagrant
+  '''
+  
 Vagrant 2.2.14
 
   vagrant box list
